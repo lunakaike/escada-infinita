@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    document.body.style.zoom = "100%";
+    if (window.innerHeight < 500){
+        document.body.style.zoom = "50%";
+    }else{
+        document.body.style.zoom = "100%";
+    }
 
     const div_ladder = document.querySelector(".ladder")
     const div_comment = document.querySelector(".div_comment")
