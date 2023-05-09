@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const div_comment = document.querySelector(".div_comment")
 
     const ladder =`╠═══╣
-    ║   ║
-    `
+║   ║
+`
     let step = 4
 
 
