@@ -45,7 +45,7 @@ async function create_comment(){
     if(comments.status === 200){
         const data = await comments.json()
 
-        let random_comment = data[Math.floor(Math.random()*27)]
+        let random_comment = data[Math.floor(Math.random()*data.length)]
 
         div_comment.innerHTML = random_comment
     }
