@@ -13,7 +13,7 @@ body{
     display: block;
     background-color: #ffffff;
     text-align: center;
-    top: 45vw;
+    top: 45%;
     left: 1vw;
     font-size: 1.2rem;
     border: #000 3px solid;
@@ -26,23 +26,34 @@ body{
     font-size: 6rem;
 }
 
+.h1_Height_ledder{
+    position: fixed;
+    display: block;
+    background-color: #ffffff;
+    text-align: center;
+    top: 10%;
+    left: 0%;
+}
+
 @keyframes balance{
     0%{
-        top: 45vw;
+        top: 45%;
     }
 
     50%{
-        top: 48vw;
+        top: 48%;
     }
 
     100%{
-        top: 45vw;
+        top: 45%;
     }
 
 }
 
 @media screen and (max-width: 700px){
-    .ladder{
-        font-size: 6rem;
+    .h1_Height_ledder{
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 20%;
     }
 }
