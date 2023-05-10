@@ -53,13 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if(comments.status === 200){
             const data = await comments.json();
 
-            let random_comment = data[26];
+            let random_comment = data[Math.floor(Math.random() * data.lenght)];
 
             div_comment.innerHTML = random_comment;
         };
-
-
-
     };
 
     window.addEventListener("scroll", () => {
