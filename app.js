@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function sistem_day() {
         if(day){
-            document.body.style.background = div_comment.style.background = `rgb(${colorw}, ${colorw}, ${colorw})`;
+            document.body.style.background = h1_Height_ledder.style.background = div_comment.style.background = `rgb(${colorw}, ${colorw}, ${colorw})`;
             colorw--;
             document.body.style.color = div_comment.style.borderColor = `rgb(${colorb}, ${colorb}, ${colorb})`;
             colorb++;
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }};
 
         if(day == false){
-            document.body.style.background  = div_comment.style.background =`rgb(${colorw}, ${colorw}, ${colorw})`;
+            document.body.style.background  = h1_Height_ledder.style.background = div_comment.style.background =`rgb(${colorw}, ${colorw}, ${colorw})`;
             colorw++;
             document.body.style.color = div_comment.style.borderColor = `rgb(${colorb}, ${colorb}, ${colorb})`;
             colorb--;
