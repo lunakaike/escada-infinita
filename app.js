@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(comments.status === 200){
             const data = await comments.json();
 
-            let random_comment = data[Math.floor(Math.random() * data.lenght)];
+            let random_comment = data[Math.floor(Math.random() * data.length)];
 
             div_comment.innerHTML = random_comment;
         };
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             sistem_day();
             step++;
 
-            if (Number.isInteger(step/10)){
+            if (Number.isInteger(step/2)){
 
                 create_comment();
 
