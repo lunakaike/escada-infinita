@@ -11,7 +11,7 @@ body{
 .div_comment{
     position: fixed;
     display: block;
-    background: #aaa;
+    background-color: #ffffff;
     text-align: center;
     top: 45vw;
     left: 1vw;
