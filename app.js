@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const div_ladder = document.querySelector(".ladder")
+    const div_comment = document.querySelector(".div_comment")
 
-    if (window.innerHeight < 500){
+    if (window.innerWidth < 600){
         document.body.style.zoom = "50%";
     }else{
         document.body.style.zoom = "100%";
     }
-
-    const div_ladder = document.querySelector(".ladder")
-    const div_comment = document.querySelector(".div_comment")
 
     const ladder =`╠═══╣
 ║   ║
