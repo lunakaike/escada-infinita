@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const ladder =`╠═══╣
 ║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
 `
     let step = 4;
     let margin_scroll = 20;
