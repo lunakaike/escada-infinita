@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const div_comment = document.querySelector(".div_comment");
     const h1_Height_ledder = document.querySelector(".h1_Height_ledder");
 
-    const ladder =`╠═══╣
+    let ladder =`╠═══╣
 ║   ║
 ╠═══╣
 ║   ║
@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
 `;
     let step = 4;
     let margin_scroll = 20;
+    let end = false;
+    let Height_ledder = 1000000;
 
     function create_ladder() {
         div_ladder.innerHTML += ladder
@@ -24,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let day = true;
     let colorb = 0;
     let colorw = 255;
-    let Height_ledder = 1000000;
 
     function sistem_day() {
         if(day){
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(comments.status === 200){
             const data = await comments.json();
 
-            let random_comment = data[Math.floor(Math.random() * data.length)];
+            let random_comment = data[data.length-1];
 
             div_comment.innerHTML = random_comment;
         };
@@ -62,19 +63,48 @@ document.addEventListener("DOMContentLoaded", function() {
     let Prev_position_scroll = window.pageYOffset;
 
     window.addEventListener("scroll", () => {
+
         let current_position_Scroll = window.pageYOffset;
 
         if (Prev_position_scroll < current_position_Scroll) {
             Height_ledder--;
             h1_Height_ledder.innerHTML = `Altura: ${Height_ledder}`;
             Prev_position_scroll = current_position_Scroll
+
+            if(Height_ledder <= 20 && end === false){
+                ladder =`
+
+
+
+
+
+
+
+`;
+            }if(Height_ledder <= 0 && end === false){
+                end = true
+                div_ladder.innerHTML += "<b style='font-size: 3rem;'><i> <center>FINAL TRISTE </b> </i> <br>CONTINUE<br>DESÇENDO</center>"
+
+                ladder =`╠═══╣
+║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
+╠═══╣
+║   ║
+`;
         }
+    }
 
         if(window.scrollY + window.innerHeight + margin_scroll > document.body.scrollHeight){
 
             create_ladder();
             sistem_day();
             step++;
+            
 
             if (Number.isInteger(step/2)){
 
