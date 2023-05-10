@@ -2,19 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const div_ladder = document.querySelector(".ladder")
     const div_comment = document.querySelector(".div_comment")
 
-    if (window.innerWidth < 600){
-        document.body.style.zoom = "50%";
-        div_comment.style.background = "#aaa";
-    }else{
-        document.body.style.zoom = "100%";
-    }
-
     const ladder =`╠═══╣
-║   ║;
+║   ║
 `
     let step = 4;
-
-
+    let margin_scroll = 20;
 
     function create_ladder() {
         div_ladder.innerHTML += ladder
@@ -63,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     window.addEventListener("scroll", () => {
-        if(window.scrollY + window.innerHeight + 20 > document.body.scrollHeight){
+        if(window.scrollY + window.innerHeight + margin_scroll > document.body.scrollHeight){
 
             create_ladder();
             sistem_day();
