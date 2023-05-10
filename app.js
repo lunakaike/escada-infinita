@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(comments.status === 200){
             const data = await comments.json();
 
-            let random_comment = data[data.length-1];
+            let random_comment = data[Math.floor(Math.random()*data.length)];
 
             div_comment.innerHTML = random_comment;
         };
